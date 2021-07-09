@@ -18,7 +18,7 @@ public class Book implements Serializable {
     private Double fineAmount;
 
     @ManyToOne
-    @JoinColumn(name = "publishingCompany_id")
+    @JoinColumn(name = "publishing_company_id")
     private PublishingCompany publishingCompany;
 
     @ManyToOne

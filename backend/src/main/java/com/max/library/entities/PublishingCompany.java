@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Objects;
 
 @Entity
-@Table(name = "tb_publishingCompany")
+@Table(name = "tb_publishing_company")
 public class PublishingCompany implements Serializable {
 
     @Id
