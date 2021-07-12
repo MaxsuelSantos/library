@@ -8,7 +8,7 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "tb_user")
-public class user implements Serializable {
+public class User implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,10 +20,10 @@ public class user implements Serializable {
     @OneToMany(mappedBy = "user")
     private List<Loan> loans = new ArrayList<>();
 
-    public user() {
+    public User() {
     }
 
-    public user(Long id, String name, String phone, String email) {
+    public User(Long id, String name, String phone, String email) {
         this.id = id;
         this.name = name;
         this.phone = phone;
@@ -70,7 +70,7 @@ public class user implements Serializable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        user user = (user) o;
+        User user = (User) o;
         return Objects.equals(id, user.id);
     }
 

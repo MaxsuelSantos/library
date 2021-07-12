@@ -25,12 +25,12 @@ public class Loan implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "user_id")
-    private user user;
+    private User user;
 
     public Loan() {
     }
 
-    public Loan(Long id, Instant loanDate, Instant returnDate, Book book, com.max.library.entities.user user) {
+    public Loan(Long id, Instant loanDate, Instant returnDate, Book book, User user) {
         this.id = id;
         this.loanDate = loanDate;
         this.returnDate = returnDate;
@@ -70,11 +70,11 @@ public class Loan implements Serializable {
         this.book = book;
     }
 
-    public com.max.library.entities.user getUser() {
+    public User getUser() {
         return user;
     }
 
-    public void setUser(com.max.library.entities.user user) {
+    public void setUser(User user) {
         this.user = user;
     }
 
